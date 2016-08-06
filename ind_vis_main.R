@@ -4,10 +4,9 @@ library(ggplot2)
 library(reshape2)
 library(Hmisc)
 library(pastecs)
-setwd("~/Projects/bls_proj/")
 #read in previous (2002-2012) and current (2012-2022) BLS projections
-prev = read.csv('~/Projects/bls_proj/data/bls_proj_2012_clean.csv',header=TRUE,check.names = FALSE)
-curr = read.csv('~/Projects/bls_proj/data/bls_proj_2022_clean.csv',header=TRUE,check.names = FALSE)
+prev = read.csv('./data/bls_proj_2012_clean.csv',header=TRUE,check.names = FALSE)
+curr = read.csv('./data/bls_proj_2022_clean.csv',header=TRUE,check.names = FALSE)
 #melt both data sets to long format
 curr.rs = melt(curr,id.vars='Sector')
 prev.rs = melt(prev,id.vars='Sector')
